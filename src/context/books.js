@@ -10,7 +10,7 @@ function Provider({ children }) {
     const response = await axios.get("https://talented-toad-apron.cyclic.app/books");
 
     setBooks(response.data);
-  }, [books]);
+  }, []);
 
   const editBookById = async (id, newTitle) => {
     const response = await axios.put(`https://talented-toad-apron.cyclic.app/books/${id}`, {
